@@ -36,7 +36,7 @@ module.exports = {
 		via: 'surveysAnalyzed'
 	},
 	isActive: {
-		type: "string"
+		type: "boolean"
 	},
 	usersAnswered: {
 		collection: "user",
