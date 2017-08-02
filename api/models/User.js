@@ -28,6 +28,11 @@ module.exports = {
             via: "analysts",
             dominant: true
         },
+        surveysAnswered:{
+            collection: "survey",
+            via: "usersAnswered",
+            dominant: true
+        },
         toJSON: function () {
             var obj = this.toObject();
             delete obj.password;

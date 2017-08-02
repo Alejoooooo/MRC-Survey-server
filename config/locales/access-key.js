@@ -1,0 +1,1 @@
+module.exports.access-key = "30cca70ca92a4e1faefb6ad7df690508";

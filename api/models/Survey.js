@@ -13,6 +13,13 @@ module.exports = {
 		type:"string",
 		required:true
 	},
+	name: {
+		type: "string", 
+		required: true
+	},
+	text: {
+		type: "json"
+	},
 	resultId: {
 		type:"string",
 		required:true
@@ -27,6 +34,13 @@ module.exports = {
 	analysts: {
 		collection: "user",
 		via: 'surveysAnalyzed'
+	},
+	isActive: {
+		type: "string"
+	},
+	usersAnswered: {
+		collection: "user",
+		via: 'surveysAnswered'
 	}
 
   }

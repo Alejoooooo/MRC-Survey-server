@@ -77,7 +77,20 @@ me : function (req, res){
                 }
                 return res.json(user);
             })
-}
+},
+
+getUsersWhoAnsweredToSurvey:function(req,res){
+    var survey = req.params.survey;
+        Survey.findOne({id:id})
+            .populate('usersAnswered')
+            .exec(function(err,users){
+                if(err){
+                    return res.json(err);
+                }
+                return res.json(users);
+            })
+    }
+
 
 
 
