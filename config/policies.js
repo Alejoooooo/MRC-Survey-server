@@ -20,9 +20,9 @@
 module.exports.policies = {
 
 
-//'*': true
+'*': true
 
-
+/*
   '*': "hasToken",
 UserController: {
     "create": true
@@ -33,7 +33,7 @@ AuthController: {
 SurveyController: {
   '*': true
 }
-
+*/
 
 
 
