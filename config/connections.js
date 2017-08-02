@@ -42,9 +42,9 @@ module.exports.connections = {
   ***************************************************************************/
    sailsmysql: {
      adapter: 'sails-mysql',
-     host: 'localhost',
-     user: 'root', //optional
-     password: 'bastiano', //optional
+     host: 'mysql.netsons.com',
+     user: 'dmizuwoc_progettoisUser', //optional
+     password: 'Bastiano!!!', //optional
      database: 'sondaggionline' //optional
    },
 
