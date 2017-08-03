@@ -45,7 +45,10 @@ module.exports.routes = {
     '/user/me': "UserController.me",
     'POST /survey/assignAnalyst': "SurveyController.assignAnalyst",
     '/survey/analyzedBy/:username' : "SurveyController.getSurveyAnalyzedBy",
-    '/user/get/userAnswerToSurvey/:id' : "UserController.getUsersWhoAnsweredToSurvey"
+    //'/user/get/userAnswerToSurvey/:id' : "UserController.getUsersWhoAnsweredToSurvey",
+    '/survey/getAnswers/:id': 'SurveyController.getAnswers',
+    '/survey/getSurveyAnsweredByUsername/:username': 'SurveyController.getSurveysAnsweredByUsername',
+    '/user/getAnswerToSurvey/:username/:id' : "UserController.getAnswerToSurvey"
     
 
 

@@ -79,6 +79,15 @@ me : function (req, res){
             })
 },
 
+getAnswerToSurvey:function(req,res){
+User.query('select answer.id, answer.text, answer.userAnswer, answer.survey, answer.createdAt from user, survey, answer where user.username = answer.userAnswer and answer.survey = survey.id and survey.id = ? and user.username = ?', [ req.params.id, req.params.username ] ,function(err, rawResult) {
+  if (err) { return res.json(err); }
+
+  return res.json(rawResult);
+
+});
+}
+/*
 getUsersWhoAnsweredToSurvey:function(req,res){
     var survey = req.params.survey;
         Survey.findOne({id:id})
@@ -91,7 +100,7 @@ getUsersWhoAnsweredToSurvey:function(req,res){
             })
     }
 
-
+*/
 
 
 };

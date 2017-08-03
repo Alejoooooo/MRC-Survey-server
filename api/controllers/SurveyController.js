@@ -70,6 +70,65 @@ module.exports = {
                 }
                 return res.json(surveys);
             })
+    },
+    getAnswers:function(req,res){
+    var id = req.params.id;
+        Survey.findOne({id:id})
+            .populate('answers')
+            .exec(function(err,survey){
+                if(err){
+                    return res.json(err);
+                }
+                return res.json(survey.answers);
+            })
+    },
+
+
+/*
+getSurveysAnsweredByUsername:function(req,res){
+    var username = req.params.username;
+        User.findOne({username:username})
+            .populate('answers')
+            .exec(function(err,user){
+               
+
+
+                Survey.find()
+                    .populate('answers')
+                    .exec(function(err, survey){
+                        if(err){
+                    return res.json(err);
+                        }
+                        return res.json(survey);
+                    })
+
+
+
+
+
+
+
+
+                if(err){
+                    return res.json(err);
+                }
+                return res.json(user);
+                
+            })
     }
+
+    */
+
+getSurveysAnsweredByUsername:function(req,res){
+User.query('select survey.id, survey.name, survey.text, survey.resultId, survey.creator, survey.isActive from user, survey, answer where user.username = answer.userAnswer and answer.survey = survey.id and user.username = ?', [ req.params.username ] ,function(err, rawResult) {
+  if (err) { return res.json(err); }
+
+  return res.json(rawResult);
+
+});
+}
+
+
+
 };
 

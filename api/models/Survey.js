@@ -38,10 +38,10 @@ module.exports = {
 	isActive: {
 		type: "boolean"
 	},
-	usersAnswered: {
-		collection: "user",
-		via: 'surveysAnswered'
-	}
+	answers: {
+            collection: "answer",
+            via: "survey"
+    }
 
   }
 };
