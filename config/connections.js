@@ -43,7 +43,7 @@ module.exports.connections = {
    
 
 
-   
+   /*
    sailsmysql: {
      adapter: 'sails-mysql',
      host: 'sql11.freesqldatabase.com',
@@ -51,18 +51,18 @@ module.exports.connections = {
      password: 'd1tM4VpxIE', //optional
      database: 'sql11188349' //optional
    },
+*/
 
 
 
-/*
    sailsmysql: {
      adapter: 'sails-mysql',
      host: '160.80.216.239',
-     user: 'root', //optional
-     password: 'toor', //optional
+     user: 'mastromattei', //optional
+     password: 'bastiano', //optional
      database: 'ismastromattei' //optional
    },
-*/
+
 
   /***************************************************************************
   *                                                                          *
