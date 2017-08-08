@@ -10,7 +10,26 @@ module.exports = {
             unique: true,
             primaryKey: true
         },
+        email: {
+            type: 'STRING',
+            required: true
+        },
         password: {
+            type: 'STRING',
+            required: true
+        },
+        birthDate: {
+            type: 'STRING',
+            required: true
+        },
+        image: {
+            type: 'STRING'
+        },
+        country: {
+            type: 'STRING',
+            required: true
+        },
+        gender: {
             type: 'STRING',
             required: true
         },
