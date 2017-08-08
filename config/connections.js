@@ -59,7 +59,7 @@ module.exports.connections = {
      user: 'root', //optional
      password: 'bastiano', //optional
      database: 'sondaggionline' //optional
-   },
+   }
 /*
    sailsmysql: {
      adapter: 'sails-mysql',
