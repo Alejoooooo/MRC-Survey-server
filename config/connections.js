@@ -43,16 +43,18 @@ module.exports.connections = {
    
 
 
-   /*
+   
    sailsmysql: {
      adapter: 'sails-mysql',
-     host: 'sql11.freesqldatabase.com',
-     user: 'sql11188349', //optional
-     password: 'd1tM4VpxIE', //optional
-     database: 'sql11188349' //optional
+     host: 'alejoooooorasp.ddns.net',
+     port: 4455,
+     user: 'mastromattei', //optional
+     password: 'diciamocomedire', //optional
+     database: 'sondaggionline' //optional
    },
-*/
 
+
+/*
   sailsmysql: {
      adapter: 'sails-mysql',
      host: 'localhost',
@@ -60,6 +62,8 @@ module.exports.connections = {
      password: 'bastiano', //optional
      database: 'sondaggionline' //optional
    }
+*/
+
 /*
    sailsmysql: {
      adapter: 'sails-mysql',
