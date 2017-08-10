@@ -18,8 +18,7 @@ module.exports = {
 		required: true
 	},
 	description: {
-		type: "string", 
-		required: true
+		type: "string"
 	},
 	text: {
 		type: "json"

@@ -11,27 +11,23 @@ module.exports = {
             primaryKey: true
         },
         email: {
-            type: 'STRING',
-            required: true
+            type: 'STRING'
         },
         password: {
             type: 'STRING',
             required: true
         },
         birthDate: {
-            type: 'STRING',
-            required: true
+            type: 'STRING'
         },
         image: {
             type: 'STRING'
         },
         country: {
-            type: 'STRING',
-            required: true
+            type: 'STRING'
         },
         gender: {
-            type: 'STRING',
-            required: true
+            type: 'STRING'
         },
         roles: {
             collection: "Role",
