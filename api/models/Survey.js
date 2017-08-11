@@ -24,12 +24,10 @@ module.exports = {
 		type: "json"
 	},
 	resultId: {
-		type:"string",
-		required:true
+		type:"string"
 	},
 	postId :{
-		type:"string",
-		required:true
+		type:"string"
 	},
 	creator: {
 		model: "user"
