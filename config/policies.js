@@ -24,9 +24,15 @@ module.exports.policies = {
 
 
   '*': "hasToken",
+/*UserController: {
+    "*": true
+},*/
+
 UserController: {
-    "get": true
+    "*": "hasToken"
 },
+
+
 
 AuthController: {
     '*': true
