@@ -49,6 +49,9 @@ module.exports.routes = {
     '/survey/getAnswers/:id': 'SurveyController.getAnswers',
     '/survey/getSurveyAnsweredByUsername/:username': 'SurveyController.getSurveysAnsweredByUsername',
     '/user/getAnswerToSurvey/:username/:id' : "UserController.getAnswerToSurvey"
+
+
+    
     
 
 

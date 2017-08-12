@@ -39,6 +39,14 @@ module.exports.cors = {
 
   allRoutes: true,
 
+
+
+  'POST /setRole': {
+   controller: 'UserController',
+   action: 'setRoleToUser',
+   cors: true
+}
+
   /***************************************************************************
   *                                                                          *
   * Which domains which are allowed CORS access? This can be a               *
