@@ -37,7 +37,8 @@ module.exports = {
 		via: 'surveysAnalyzed'
 	},
 	isActive: {
-		type: "boolean"
+		type: "boolean",
+		defaultsTo: true
 	},
 	answers: {
             collection: "answer",
