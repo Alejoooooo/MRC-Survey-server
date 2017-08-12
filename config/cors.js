@@ -45,7 +45,7 @@ module.exports.cors = {
    controller: 'UserController',
    action: 'setRoleToUser',
    cors: true
-}
+},
 
   /***************************************************************************
   *                                                                          *
