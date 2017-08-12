@@ -25,7 +25,8 @@ module.exports.policies = {
 
   '*': "hasToken",
 UserController: {
-    "get": true
+    "get": true,
+    "setRoleToUser": true
 },
 
 AuthController: {
