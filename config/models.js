@@ -28,5 +28,10 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   migrate: 'alter'
+/*migrate: 'safe'
+*/
+
+/*DEVI CREARE UNA CHIAVE PRIMARIA COMPOSITA SU RUOLO E UTENTE NEL DB
+*/
 
 };

@@ -29,6 +29,10 @@ module.exports = {
         gender: {
             type: 'STRING'
         },
+        isActive: {
+            type: "boolean",
+            defaultsTo: true
+        },
         roles: {
             collection: "Role",
             via: "users",
