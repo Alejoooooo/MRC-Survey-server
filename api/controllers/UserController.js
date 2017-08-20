@@ -63,6 +63,23 @@ setRoleToUser:function(req,res){
 		})
     },
 
+setUserRole:function(req,res){
+    var role = "user";
+    var username = req.body.username;
+        User.findOne({username:username})
+            .exec(function (err, user){
+                if(err){
+                    return res.json(err);
+                }
+                //return res.json(role);
+                user.roles.add(role)
+                user.save(function(err) {
+                    return res.json(err);
+                });
+                return res.json(user)
+        })
+    },
+
 whoami : function (req, res){
     return res.json(req.user);
     //return res.json(req.session);
@@ -78,6 +95,27 @@ me : function (req, res){
                 return res.json(user);
             })
 },
+
+
+
+registerUser:function(req,res){
+        var username = req.body.username;
+        var email = req.body.email;
+        var password = req.body.password;
+        var gender = req.body.gender;
+        var birthDate = req.body.birthDate;
+        var country = req.body.country;
+        var image = req.body.image;
+        User.create({username:username, password:password, email:email, gender:gender, birthDate:birthDate, country:country, image:image})
+            .exec(function (err, user){
+                if(err){
+                    return res.json(err);
+                }
+                user.roles.add("utente")
+                return res.json(user);
+            })
+    },
+
 
 getAnswerToSurvey:function(req,res){
 User.query('select answer.id, answer.text, answer.userAnswer, answer.survey, answer.createdAt from user, survey, answer where user.username = answer.userAnswer and answer.survey = survey.id and survey.id = ? and user.username = ?', [ req.params.id, req.params.username ] ,function(err, rawResult) {
