@@ -19,7 +19,7 @@ module.exports = {
                     });
                 } else {
 
-                    var token = jwt.sign(user[0], sails.config.secret, {expiresIn: 600 * 24});
+                    var token = jwt.sign(user[0], sails.config.secret, {expiresIn: 6000000 * 24});
                     // Set persistent cookie
                     req.session.cookie.token = token;
                     res.send({
