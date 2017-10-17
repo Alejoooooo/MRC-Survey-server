@@ -42,6 +42,10 @@ module.exports = {
             collection: "survey",
             via: "creator"
         },
+        access: {
+            collection: "access",
+            via: "user"
+        },
         surveysAnalyzed:{
             collection: "survey",
             via: "analysts",
