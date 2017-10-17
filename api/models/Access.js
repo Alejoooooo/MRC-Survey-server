@@ -17,7 +17,8 @@ module.exports = {
   		model: "user"
   	},
   	date: {
-  		type: "string"
+  		type: "datetime",
+  		defaultsTo: Date.now
   	}
   }
 };
