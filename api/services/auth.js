@@ -1,5 +1,6 @@
 var passport = require("passport");
 var jwt = require('jsonwebtoken');
+var access = require('../services/access');
 
 module.exports = {
     login: function (req, res) {
@@ -18,6 +19,7 @@ module.exports = {
                         error: err
                     });
                 } else {
+                    //IN QUESTO PUNTO DOVREBBE FARE LOG ACCESSO
 
                     var token = jwt.sign(user[0], sails.config.secret, {expiresIn: 6000000 * 24});
                     // Set persistent cookie
@@ -27,6 +29,7 @@ module.exports = {
                         user: user[0],
                         token: token
                     });
+                    access.log(req, res);
                 }
             }
         })(req, res);

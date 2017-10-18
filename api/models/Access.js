@@ -16,9 +16,11 @@ module.exports = {
   	user: {
   		model: "user"
   	},
-  	date: {
+  	data: {
   		type: "datetime",
-  		defaultsTo: Date.now
+  		defaultsTo: function() {
+  			return new Date();
+  		}
   	}
   }
 };
