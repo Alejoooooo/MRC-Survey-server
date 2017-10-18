@@ -5,6 +5,9 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
+var bcrypt = require('bcrypt-nodejs');
+
+
 module.exports = {
 
 //RETURN ALL USERS
@@ -41,7 +44,7 @@ getUsersByRole:function(req,res){
             .exec(function(err,users){
                 if(err){
                     return res.json(err);
-                }
+                }   
                 return res.json(users);
             })
     },
@@ -61,6 +64,33 @@ setRoleToUser:function(req,res){
                 });
                 return res.json(user)
 		})
+    },
+
+    setPassToUser:function(req,res){
+    var password = req.body.password;
+    var username = req.body.username;
+        User.findOne({username:username})
+            .exec(function (err, user){
+                if(err){
+                    return res.json(err);
+                }
+                //return res.json(role);
+
+                bcrypt.genSalt(10, function (err, salt) {
+                bcrypt.hash(user.password, salt, function () {
+                }, function (err, hash) {
+                    user.password = hash;
+                    user.save(function(err) {
+                    return res.json(err);
+                });
+                });
+                });
+
+
+
+                
+                return res.json(user)
+        })
     },
 
 setUserRole:function(req,res){
