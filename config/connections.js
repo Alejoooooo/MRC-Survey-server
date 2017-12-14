@@ -63,17 +63,17 @@ module.exports.connections = {
      database: 'sondaggionline' //optional
    }*/
 
-     sailsmysql: {
+/*     sailsmysql: {
      adapter: 'sails-mysql',
-     host: '160.80.216.233',
+     host: '160.80.216.239',
      port: 3306,
      user: 'root', //optional
-     password: 'bastiano', //optional
+     password: 'toor', //optional
      database: 'sondaggionline' //optional
-   }
+   }*/
 
 
-/*
+
    sailsmysql: {
      adapter: 'sails-mysql',
      host: '160.80.216.239',
@@ -81,7 +81,7 @@ module.exports.connections = {
      password: 'bastiano', //optional
      database: 'ismastromattei' //optional
    },
-*/
+
 
   /***************************************************************************
   *                                                                          *
