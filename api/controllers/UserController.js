@@ -75,22 +75,19 @@ setRoleToUser:function(req,res){
                     return res.json(err);
                 }
                 //return res.json(role);
-
                 bcrypt.genSalt(10, function (err, salt) {
-                bcrypt.hash(user.password, salt, function () {
-                }, function (err, hash) {
-                    user.password = hash;
+            bcrypt.hash(user.password, salt, function () {
+            }, function (err, hash) {
+                var passC = hash;
+                
+                    user.password = passC;
                     user.save(function(err) {
                     return res.json(err);
-                });
-                });
-                });
+            });
+        });
 
-
-
-                
-                return res.json(user)
-        })
+                });
+                })
     },
 
 setUserRole:function(req,res){
@@ -155,6 +152,23 @@ User.query('select answer.id, answer.text, answer.userAnswer, answer.survey, ans
 
 });
 }
+
+
+/*hashPassword:function (req, res){
+    var bcrypt = require('bcrypt');
+    const saltRounds = 10;
+    var password = req.body.password;
+
+    bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(password, salt, function(err, hash) {
+        return res.json(hash);
+    });
+});
+
+    
+}*/
+
+
 /*
 getUsersWhoAnsweredToSurvey:function(req,res){
     var survey = req.params.survey;

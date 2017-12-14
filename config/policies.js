@@ -29,12 +29,14 @@ UserController: {
     "setRoleToUser": true,
     'post' : true,
     'registerUser' : true,
-    'setUserRole' : true,
+    'setUserRole' : true
+
     
 },
 
 AuthController: {
-    '*': true
+    '*': true,
+    'hashPassword' : true,
 },
 
 /*

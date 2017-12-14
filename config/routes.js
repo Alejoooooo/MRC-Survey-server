@@ -52,6 +52,7 @@ module.exports.routes = {
     '/survey/getSurveyAnsweredByUsername/:username': 'SurveyController.getSurveysAnsweredByUsername',
     '/user/getAnswerToSurvey/:username/:id' : "UserController.getAnswerToSurvey",
     'POST /user/setPassword': "UserController.setPassToUser",
+    '/auth/hashPassword': "AuthController.hashPassword",
 
 
     

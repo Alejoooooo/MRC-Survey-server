@@ -20,6 +20,23 @@ module.exports = {
   logout: function(req, res){
     req.logout();
     res.send(200);
-  }
+  },
+
+
+  hashPassword:function (req, res){
+    var bcrypt = require('bcrypt');
+    const saltRounds = 10;
+    var password = req.body.password;
+
+    bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(password, salt, function(err, hash) {
+        return res.json(hash);
+    });
+});
+
+    
+}
+
+  
 };
 
