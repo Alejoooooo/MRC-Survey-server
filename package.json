@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "bcrypt": "1.0.3",
     "ejs": "2.3.4",
     "express-jwt": "^5.3.0",
     "grunt": "1.0.1",
