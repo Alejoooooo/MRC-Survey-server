@@ -23,6 +23,7 @@ module.exports = {
   	survey: {
   		model: "survey"
   	}
+    
   }
 };
 
