@@ -29,7 +29,7 @@ module.exports = {
                         user: user[0],
                         token: token
                     });
-                    access.log(req, res);
+                    //access.log(req, res);
                 }
             }
         })(req, res);
