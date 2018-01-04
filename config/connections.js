@@ -51,6 +51,8 @@ module.exports.connections = {
      password: "PASSWORD", //optional
      database: 'NOMEDATABASE' //optional
    },
+  
+  //CREDENTIALS HAVE BEEN REMOVED ON PURPOSE
    
 
 
