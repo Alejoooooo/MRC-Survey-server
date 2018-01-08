@@ -3,7 +3,7 @@ var jwt = require('jsonwebtoken');
 var access = require('../services/access');
 var telegram = require('telegram-bot-api');
 var api = new telegram({
-    token: '487163058:AAGdE3-02TRtFxPIjO15Bc05CleyKpoqsJk'
+    token: TOKEN
 });
 
 module.exports = {
